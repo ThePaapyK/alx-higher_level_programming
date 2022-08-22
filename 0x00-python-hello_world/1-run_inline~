@@ -1,0 +1,2 @@
+#!/bin/bash
+ptyhon3 $PYCODE
