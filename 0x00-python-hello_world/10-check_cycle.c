@@ -9,19 +9,23 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *current;
+	listint_t *new;
 
 	if(list == NULL || list-> next == NULL)
 		return (0);
 
-	current = list;
+	current = list->next;
+	new = list->next->next;
 
-	while(current != NULL)
+	while(current && new && new->next)
 	{
-		current = current->next;
-		if (current == list)
+
+		if (current == new)
 		{
 			return (1);
 		}
+		current = current->next;
+		new = new->next->next;
 	}
 	return (0);
 }
