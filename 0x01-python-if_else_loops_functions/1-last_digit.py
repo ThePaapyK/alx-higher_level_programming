@@ -6,7 +6,7 @@ s = str(number)
 i = s[-1:]
 i = int(i)
 if number < 0:
-    i = -i
+    i = -1 * i
 
 if i > 5:
     print(f"Last digit of {number} is {i} and is greater than 5")
