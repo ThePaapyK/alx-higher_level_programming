@@ -7,4 +7,4 @@ def element_at(my_list, idx):
     if idx > len(my_list):
         return None
 
-    return my_list.pop([idx])
+    return my_list.pop(idx)
