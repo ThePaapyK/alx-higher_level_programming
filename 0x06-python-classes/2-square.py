@@ -9,6 +9,7 @@ if size is less than 0, raise a ValueError exception
 with the message size must be >= 0
 """
 
+
 class Square:
     """Defines a square with size"""
 
@@ -22,6 +23,6 @@ class Square:
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
-            raise ValueError("ize must be >= 0")
+            raise ValueError("size must be >= 0")
 
         self.__size = size
