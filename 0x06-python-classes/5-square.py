@@ -7,7 +7,6 @@ if size is equal to 0, print an empty line
 """
 
 
-
 class Square:
     """Represent a square."""
 
