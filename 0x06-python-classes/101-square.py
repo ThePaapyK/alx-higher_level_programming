@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+""" A class Square that defines a square by: (based on 6-square.py).
+In addition,
+Printing a Square instance should have the same behavior as my_print()
+"""
 
 
 class Square:
