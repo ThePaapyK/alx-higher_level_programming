@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
-import math
 """ A python bytcode code was converted to this. Magic, ain't it?"""
+import math
 
 
 class MagicClass:
