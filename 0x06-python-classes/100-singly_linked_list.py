@@ -3,6 +3,7 @@
 """ A class Node that defines a node of a singly linked list
 """
 
+
 class Node:
     """ Node of a singly linked list """
     def __init__(self, data, next_node=None):
@@ -37,6 +38,7 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 class SinglyLinkedList:
     """defines a singly linked list"""
     def __init__(self):
@@ -61,7 +63,7 @@ class SinglyLinkedList:
         value (Node): new node to be inseted
         """
         new_node = Node(value)
-        if self.__head == None:
+        if self.__head is None:
             new_node.next_node = None
             self.__head = new_node
         elif self.__head.data > value:
