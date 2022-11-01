@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""A class Rectangle that defines a rectangle by: (based on 3-rectangle.py).
+In addition:
+repr() should return a string representation of the rectangle
+to be able to recreate a new instance by using eval()
+"""
 
 
 class Rectangle:
@@ -52,7 +57,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __repr__(self):
-       return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __str__(self):
         rect = ""
