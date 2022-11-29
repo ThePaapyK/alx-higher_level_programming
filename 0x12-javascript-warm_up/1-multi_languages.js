@@ -1,9 +1,8 @@
 #!/usr/bin/node
 
-let myC = 'C is fun'; 
-let myPy = 'Python is cool'; 
-let myJava = 'JavaScript is amazing'; 
-console.log(myC); 
-console.log(myPy); 
-console.log(myJava); 
-
+const myC = 'C is fun';
+const myPy = 'Python is cool';
+const myJava = 'JavaScript is amazing';
+console.log(myC);
+console.log(myPy);
+console.log(myJava);
