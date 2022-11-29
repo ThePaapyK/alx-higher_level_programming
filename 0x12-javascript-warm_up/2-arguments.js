@@ -8,4 +8,4 @@ if (myArgs.length === 0) {
   console.log('Argument found');
 } else if (myArgs.length > 1) {
   console.log('Arguments found');
-} 
+}
