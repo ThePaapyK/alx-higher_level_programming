@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const len = process.argv.length;
-let myArr = [];
+const myArr = [];
 if (len === 2 || len === 3) {
   console.log(0);
 } else {
