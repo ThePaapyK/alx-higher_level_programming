@@ -9,7 +9,7 @@ if (isNaN(num)) {
   for (let i = 0; i < num; i++) {
     for (let j = 0; j < num; j++) {
       mySq += 'X';
-    } 
+    }
     if (i < (num - 1)) {
       mySq += '\n';
     }
