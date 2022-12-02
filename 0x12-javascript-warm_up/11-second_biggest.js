@@ -1,10 +1,14 @@
 #!/usr/bin/node
 
 const len = process.argv.length;
-let myArr = process.argv;
-if (len === 2) {
-  console.log(0);
-} else if (len === 3) {
+let myArr = [];
+if (len === 2 || len === 3) {
   console.log(0);
 } else {
-  
+  for (let i = 0; i < (len - 2); i++) {
+    myArr[i] = parseInt(process.argv[i + 2]);
+  }
+  myArr.sort();
+  myArr.reverse();
+  console.log(myArr[1]);
+}
