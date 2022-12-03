@@ -7,7 +7,7 @@ class Square extends SquareIt {
       if (c === undefined) {
         console.log('X'.repeat(this.width));
       } else {
-	console.log(c.repeat(this.width));
+        console.log(c.repeat(this.width));
       }
     }
   }
