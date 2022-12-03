@@ -1,6 +1,10 @@
 #!/usr/bin/node
 
 exports.esrever = function (list) {
-  list.sort(function (a, b) { return (b - a) });
-  return (list);
-}
+  const rList = [];
+  const index = list.length - 1;
+  for (let i = index; i >= 0; i--) {
+    rList.push(list[i]);
+  }
+  return (rList);
+};
