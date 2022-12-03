@@ -6,16 +6,18 @@ class Rectangle {
       this.height = h;
     }
   }
+
   print () {
     let myChar = '';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
         myChar += 'X';
       }
-      if (i < (this.height - 1))
+      if (i < (this.height - 1)) {
         myChar += '\n';
+      }
     }
     console.log(myChar);
-  };
+  }
 }
 module.exports = Rectangle;
