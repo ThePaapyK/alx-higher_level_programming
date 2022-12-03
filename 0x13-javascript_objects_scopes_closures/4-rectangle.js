@@ -19,9 +19,9 @@ class Rectangle {
     }
     console.log(myChar);
   }
-  
+
   rotate () {
-    let tmp = this.width;
+    const tmp = this.width;
     this.width = this.height;
     this.height = tmp;
   }
