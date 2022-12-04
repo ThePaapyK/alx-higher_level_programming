@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+
+
 # a script that lists all states from the database hbtn_0e_0_usa
 # it takes username, password and database name as arguments
+
 import sys
 import MySQLdb
 
@@ -16,3 +19,4 @@ if __name__ == "__main__":
 
     cur.close()
     db.close()
+
