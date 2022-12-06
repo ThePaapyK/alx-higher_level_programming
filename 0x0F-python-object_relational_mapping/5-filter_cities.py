@@ -19,9 +19,7 @@ if __name__ == "__main__":
                 ORDER BY cities.`state_id` ASC")
     allcities = cur.fetchall()
 
-    for city in allcities:
-        if city[2] == sys.argv[4]:
-            print(city)
+    print(", ".join(city[1] for city in allcities if city[2] == sys.argv[4]))
 
     cur.close()
     db.close()
