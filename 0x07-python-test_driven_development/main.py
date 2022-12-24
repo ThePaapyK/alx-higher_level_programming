@@ -12,4 +12,4 @@ cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
 beatiorem! Iam ruinas videres""")
 print("")
 print("")
-text_indentation("Holberton.School?How are you: John")
+text_indentation("Holberton. School? How are you:    John")
