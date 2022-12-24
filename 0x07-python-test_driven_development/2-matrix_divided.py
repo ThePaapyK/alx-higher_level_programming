@@ -6,11 +6,13 @@ def matrix_divided(matrix, div):
     """divides all elements of a matrix"""
     core = 0
     if not all(isinstance(item, list) for item in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists) "
+                        "of integers/floats")
 
     for thing in matrix:
         if not all(isinstance(obj, (int, float)) for obj in thing):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError("matrix must be a matrix (list of lists) "
+                            "of integers/floats")
 
     for row in matrix:
         if len(matrix[0]) != len(row):
