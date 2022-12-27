@@ -64,4 +64,6 @@ Now use it:
     TypeError:
 
     >>> b_g.integer_validator("age", True) # doctest: +IGNORE_EXCEPTION_DETAIL
-    
+    Traceback (most recent call last):
+         ...
+    TypeError: age must be an integer 
