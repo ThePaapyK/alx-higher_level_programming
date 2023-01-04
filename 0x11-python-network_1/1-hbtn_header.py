@@ -10,5 +10,5 @@ import sys
 url = sys.argv[1]
 with urllib.request.urlopen(url) as response:
     content = response.info()
-    header = content.get('X-Request-Id')
+    header = content['X-Request-Id']
     print(header)
