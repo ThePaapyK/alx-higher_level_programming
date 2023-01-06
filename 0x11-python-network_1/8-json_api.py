@@ -12,10 +12,11 @@ if __name__ == "__main__":
         letter = {'q': argv[1]}
 
     r = requests.post('http://0.0.0.0:5000/search_user', data=letter)
-    j = r.json()
-    if r.headers.get('content-type') != 'application/json':
+    try:
+        j = r.json()
+        if j == {}:
+            print("No result")
+        else:
+            print("[{}] {}".format(j['id'], j['name']))
+    except JSONDecodeError:
         print("Not a valid JSON")
-    elif j == {}:
-        print("No result")
-    else:
-        print("[{}] {}".format(j['id'], j['name']))
