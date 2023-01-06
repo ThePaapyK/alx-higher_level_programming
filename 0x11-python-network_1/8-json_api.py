@@ -6,17 +6,16 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    try:
-        letter = {'q': argv[1]}
-    except IndexError:
+    if len(argv) == 1:
         letter = {'q': ""}
+    else:
+        letter = {'q': argv[1]}
 
     r = requests.post('http://0.0.0.0:5000/search_user', data=letter)
-    if r.status_code == 204:
+    j = r.json()
+    if r.headers['content-type'] != 'application/json':
+        print("Not a valid JSON")
+    elif j == {}:
         print("No result")
     else:
-        try:
-            j = r.json()
-            print("[{}] {}".format(j['id'], j['name']))
-        except requests.exceptions.JSONDecodeError:
-            print("Not a valid JSON")
+        print("[{}] {}".format(j['id'], j['name']))
