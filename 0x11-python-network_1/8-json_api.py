@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     r = requests.post('http://0.0.0.0:5000/search_user', data=letter)
     j = r.json()
-    if r.headers['content-type'] != 'application/json':
+    if r.headers.get('content-type') != 'application/json':
         print("Not a valid JSON")
     elif j == {}:
         print("No result")
