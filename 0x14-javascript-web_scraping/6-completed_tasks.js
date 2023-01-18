@@ -7,7 +7,7 @@ const url = process.argv[2];
 const dict = {};
 request(url, function (error, request, body) {
   if (error) {
-    console.log(err);
+    console.log(error);
   } else {
     for (const item of JSON.parse(body)) {
       if (item.completed === true) {
