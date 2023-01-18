@@ -3,26 +3,21 @@
 // first argument is the API URL: https://jsonplaceholder.typicode.com/todos
 
 const request = require('request');
-console.log('{ ');
-async function req () {
-  for (let i = 1; i <= 10; i++) {
-    const url = process.argv[2] + '?' + 'userId=' + i.toString();
-    console.log(url);
-    await request(url, postResponse);
-  }
-}
-req();
-function postResponse (error, response, body) {
-  let n = 0;
+const url = process.argv[2];
+const dict = {};
+request(url, function (error, request, body) {
   if (error) {
-    return console.log(error);
-  }
-  else {
-    const results = JSON.parse(body);
-      for (let j = 0; j < results.length; j++) {
-        if ((results[j]).completed === true) {
-          console.log(results[j]);
-	}
+    console.log(err);
+  } else {
+    for (const item of JSON.parse(body)) {
+      if (item.completed === true) {
+        if (dict[item.userId]) {
+          dict[item.userId]++;
+        } else {
+          dict[item.userId] = 1;
+        }
       }
+    }
+    console.log(dict);
   }
-}
+});
